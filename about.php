@@ -49,13 +49,10 @@
 		<div class="row">
 		<div class="col-md-6"><img src="img/binoculars.png" alt="Our Vission" class="rounded float-left img-fluid"></div>
 		<div class="col-md-6">
-			<h2 class="text-center">Our Vission</h2>
+			<h2 class="text-center">Our Vision</h2>
 			<hr class="red-bar">
 			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
-			</p>
-			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+			To pave way for a safer and better tommorrow by bringing blood donors and those in need to a common platform. We envision to fulfill the blood need in the country. Whenever the need arises , the needy can appily search our website and get access to the contacts od donors within minutes. 
 			</p>
 		</div>
 	</div>
@@ -70,10 +67,7 @@
 			<h2 class="text-center">Our Goal</h2>
 			<hr class="red-bar">
 			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
-			</p>
-			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+			To increase our active donor base . This will help to maintain regular supply of blood to the needy. Active donor base will help in saving millions of lives. Our goal is to satisfy the needs of as many people as possible.
 			</p>
 		</div>
 		<div ><img src="img/target.png" alt="Our Vission" class="rounded img-fluid float-right"></div>
@@ -91,10 +85,7 @@
 			<h2 class="text-center">Our Mission</h2>
 			<hr class="red-bar">
 			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
-			</p>
-			<p>
-				We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+			To enhance the well being of patients in our service area by assuring a reliable supply of the safest possible blood.We focus on creating & expanding a virtual army of blood donating volunteers who could be searched and contacted by famiy of the patient in times of need.
 			</p>
 		</div>
 	</div>

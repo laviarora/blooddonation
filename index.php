@@ -11,12 +11,12 @@
 					<div class="col-md-6 offset-md-3">
 
 						<div class="header">
-							<h1 class="text-center">Donate the blood, save the life</h1>
-						<p class="text-center">Donate the blood to help the others.</p>
+							<h1 class="text-center">DONATE SMILES BY DONATING BLOOD</h1>
+						<p class="text-center">Donate your blood to help others</p>
 						</div>
 
 
-						<h1 class="text-center">Search The Donors</h1>
+						<h1 class="text-center">Search Donors</h1>
 						<hr class="white-bar text-center">
 
 						<form action="#" method="get" class="form-inline text-center" style="padding: 40px 0px 0px 5px;">
@@ -52,12 +52,10 @@
 			<div class="container-fluid red-background">
 				<div class="row">
 					<div class="col-md-12">
-						<h1 class="text-center"  style="color: white; font-weight: 700;padding: 10px 0 0 0;">Donate The Blood</h1>
+						<h1 class="text-center"  style="color: white; font-weight: 700;padding: 10px 0 0 0;">THE GIFT OF BLOOD IS THE GIFT OF LIFE</h1>
 						<hr class="white-bar">
 						<p class="text-center pera-text">
-							We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
-
-							We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+							Our nation requires 4 crore units of blood while only 40 lakhs units are available. Every two seconds someone needs blood. There is no substitute for human blood. It cannot be manufactured. Blood donation is an extremely noble deed, yet there is a scarcity of regular blood donors across India. We focus on creating & expanding a virtual army of blood donating volunteers who could be searched and contacted by famiy of the patient in times of need.
 						</p>
 						<a href="#" class="btn btn-default btn-lg text-center center-aligned">Become a Life Saver!</a>
 					</div>
@@ -70,10 +68,10 @@
 				<div class="row">
     				<div class="col">
     					<div class="card">
-     						<h3 class="text-center red">Our Vission</h3>
+     						<h3 class="text-center red">Our Vision</h3>
 								<img src="img/binoculars.png" alt="Our Vission" class="img img-responsive" width="168" height="168">
 								<p class="text-center">
-									We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+								To pave way for a safer and better tommorrow by bringing blood donors and those in need to a common platform.
 								</p>
 						</div>
     				</div>
@@ -83,7 +81,7 @@
       							<h3 class="text-center red">Our Goal</h3>
 								<img src="img/target.png" alt="Our Vission" class="img img-responsive" width="168" height="168">
 								<p class="text-center">
-									We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+								To increase our active donor base and satisfy the blood needs of as many people as possible.
 								</p>
 						</div>
     				</div>
@@ -93,7 +91,7 @@
       						<h3 class="text-center red">Our Mission</h3>
 								<img src="img/goal.png" alt="Our Vission" class="img img-responsive" width="168" height="168">
 								<p class="text-center">
-									We are a group of exceptional programmers; our aim is to promote education. If you are a student, then contact us to secure your future. We deliver free international standard video lectures and content. We are also providing services in Web & Software Development.
+								To enhance the well being of patients in our service area by assuring a reliable supply of the safest possible blood.
 								</p>
 							</div>
    			 		</div>

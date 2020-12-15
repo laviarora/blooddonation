@@ -66,7 +66,7 @@
 
 
 	<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Are you delete this record?</strong>
+                <strong>Do you want to delete this record?</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

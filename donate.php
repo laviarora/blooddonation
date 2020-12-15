@@ -110,7 +110,7 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
             </div><!--End form-group-->
             <div class="form-inline">
               <input type="checkbox" name="term" value="true" required style="margin-left:10px;">
-              <span style="margin-left:10px;"><b>I am agree to donate my blood and show my Name, Contact Nos. and E-Mail in Blood donors List</b></span>
+              <span style="margin-left:10px;"><b>I agree to donate my blood and show my Name, Contact Nos. and E-Mail in Blood donors List</b></span>
             </div><!--End form-group-->
 			
 					<div class="form-group">
