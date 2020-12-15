@@ -93,7 +93,7 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
 					</div>
 					<div class="form-group">
               <label for="contact_no">Contact No</label>
-              <input type="text" name="contact_no" value="" placeholder="03********" class="form-control" required pattern="^\d{11}$" title="11 numeric characters only" maxlength="11">
+              <input type="text" name="contact_no" value="" placeholder="03********" class="form-control" required pattern="^\d{10}$" title="10 numeric characters only" maxlength="10">
             </div><!--End form-group-->
 					<div class="form-group">
               <label for="city">City</label>
@@ -102,11 +102,11 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
             </div><!--city end-->
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" name="password" value="" placeholder="Password" class="form-control" required pattern="{6,}">
+              <input type="password" name="password" value="" placeholder="Password" class="form-control" required pattern=".{6,10}">
             </div><!--End form-group-->
             <div class="form-group">
               <label for="password">Confirm Password</label>
-              <input type="password" name="c_password" value="" placeholder="Confirm Password" class="form-control" required pattern="{6,}">
+              <input type="password" name="c_password" value="" placeholder="Confirm Password" class="form-control" required pattern=".{6,10}">
             </div><!--End form-group-->
             <div class="form-inline">
               <input type="checkbox" name="term" value="true" required style="margin-left:10px;">
