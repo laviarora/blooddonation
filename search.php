@@ -153,3 +153,35 @@
 	include ('include/footer.php');
 
 ?>
+<script type="text/javascript">
+	
+	$(function(){
+
+		$('#search').on('click',function(){
+
+			var city = $('#city').val();
+			var blood_group = $('#blood_group').val();
+
+			$.ajax({
+				type: 'GET',
+				url: 'ajaxsearch.php',
+				data: {city:city,blood_group,blood_group},
+				success:function(data){
+					if(!data.error)
+					{
+						$('#data').html(data);
+					}
+				}
+
+			});
+		});
+
+
+	});
+
+</script>
+
+
+
+
+
