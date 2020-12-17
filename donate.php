@@ -227,7 +227,7 @@ if(isset($_POST['submit']))
 		$DonorDOB = $year."-".$month."-".$day;
 		if (isset($name) && isset($blood_group) && isset($gender) && isset($day) && isset($month) && isset($year) && isset($email) && isset($contact) && isset($city) && isset($password)) 
 		{
-			$sql="INSERT INTO blooddonation VALUES ($name','$blood_group','$gender','$DonorDOB','$email','$contact','$city','$password','0')";
+			$sql="INSERT INTO blooddonation VALUES ('$name','$blood_group','$gender','$DonorDOB','$email','$contact','$city','$password','0')";
 			if (mysqli_query($connection,$sql)) 
 			{
 				$submitSuccess = '<div class="alert alert-success alert-dismissible fade show" role="alert">
