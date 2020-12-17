@@ -1,7 +1,45 @@
 <?php 
   //include header file
   include ('include/header.php');
+  
+if(isset($_POST['submit'])){
+
+	if(isset($_POST['term']) === true){
+
+		if(isset($_POST['name']) && !empty($_POST['name'])){
+			if(preg_match('/^[A-Za-z\s]+$', $_POST['name'])){
+
+			}else{
+				$nameError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Only lower and upper case and space characters are allowed.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+			}
+
+		}else{
+			$nameError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Please fill the name field.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+		}
+
+	}else{
+		$termError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Kindly agree to our terms and conditions.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+	}
+}
 ?>
+
 
 <style>
 	.size{
@@ -44,11 +82,13 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
 	<div class="row">
 		<div class="col-md-6 offset-md-3 form-container">
 					<h3>SignUp</h3>
+					
 					<hr class="red-bar">
+					<?php if(isset($termError)) echo $termError; ?>
 					
           <!-- Error Messages -->
 
-				<form class="form-group" action="" method="post">
+				<form class="form-group" action="" method="post" novalidate="">
 					<div class="form-group">
 						<label for="fullname">Full Name</label>
 						<input type="text" name="name" id="fullname" placeholder="Full Name" required pattern="[A-Za-z/\s]+" title="Only lower and upper case and space" class="form-control">
@@ -93,7 +133,7 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
 					</div>
 					<div class="form-group">
               <label for="contact_no">Contact No</label>
-              <input type="text" name="contact_no" value="" placeholder="03********" class="form-control" required pattern="^\d{11}$" title="11 numeric characters only" maxlength="11">
+              <input type="text" name="contact_no" value="" placeholder="03********" class="form-control" required pattern="^\d{10}$" title="10 numeric characters only" maxlength="10">
             </div><!--End form-group-->
 					<div class="form-group">
               <label for="city">City</label>
@@ -102,15 +142,15 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
             </div><!--city end-->
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" name="password" value="" placeholder="Password" class="form-control" required pattern="{6,}">
+              <input type="password" name="password" value="" placeholder="Password" class="form-control" required pattern=".{6,10}">
             </div><!--End form-group-->
             <div class="form-group">
               <label for="password">Confirm Password</label>
-              <input type="password" name="c_password" value="" placeholder="Confirm Password" class="form-control" required pattern="{6,}">
+              <input type="password" name="c_password" value="" placeholder="Confirm Password" class="form-control" required pattern=".{6,10}">
             </div><!--End form-group-->
             <div class="form-inline">
               <input type="checkbox" name="term" value="true" required style="margin-left:10px;">
-              <span style="margin-left:10px;"><b>I am agree to donate my blood and show my Name, Contact Nos. and E-Mail in Blood donors List</b></span>
+              <span style="margin-left:10px;"><b>I agree to donate my blood and show my Name, Contact Nos. and E-Mail in Blood donors List</b></span>
             </div><!--End form-group-->
 			
 					<div class="form-group">
