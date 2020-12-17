@@ -29,7 +29,7 @@
 
 			<h1 class="text-center error">404</h1>
 			<div class="head-para">
-				<h3 class="text-center">OOPS 404, SORRY WE CAN'T FIND THAT PAGE!</h3>
+				<h3 class="text-center">OOPS, SORRY WE CAN'T FIND THAT PAGE!</h3>
 			<p class="text-center">Either something went wrong or that page dosent exist anymore.</p>
 			</div>	
 
