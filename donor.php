@@ -112,7 +112,7 @@
 					<span>'.$row['Blood Group'] .'</span>
 					<span>'.$row['Gender'] .'</span>
 					<span>'.$row['Email'] .'</span>
-					<span>'.$row['Contact Number'] .'</span>
+					<span>'.$row['Contact_no'] .'</span>
 					
 					</div>
 					';
