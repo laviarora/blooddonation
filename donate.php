@@ -194,6 +194,52 @@ if(isset($_POST['submit'])){
 		</button>
 	  </div>';
 	}
+
+
+	if(isset($_POST['email']) && !empty($_POST['email'])){
+
+
+		    $pattern='/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
+			if(preg_match($pattern, $_POST['email'])){
+                 $check_email=$_POST['email'];
+                $sql="SELECT email FROM donor WHERE email='$check_email' ";
+                $result=mysqli_query($connection,$sql);
+
+                if(mysqli_num_rows($result)>0){
+                	$emailError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Sorry this email is already exist.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+			}
+
+                }else{
+                	$email=$_POST['email'];
+
+                }
+
+			}else{
+				$emailError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>please enter valid email address.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+			}
+
+		}else{
+			$emailError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Please fill the email input.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+
+		}
 }
 ?>
 
