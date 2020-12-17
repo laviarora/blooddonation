@@ -208,6 +208,24 @@ if(isset($_POST['submit']))
 	  </div>';
 	}
 
+<<<<<<< HEAD
+=======
+
+
+
+
+	}else{
+		$termError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Kindly agree to our terms and conditions.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+	}
+
+
+	if(isset($_POST['email']) && !empty($_POST['email'])){
+>>>>>>> parent of 4d0568f... 10 done
 
 
 
@@ -266,6 +284,7 @@ if(isset($_POST['submit']))
 	  		</div>';
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 	else
 	{
@@ -276,6 +295,8 @@ if(isset($_POST['submit']))
 		</button>
 	  	</div>';
 	}
+=======
+>>>>>>> parent of 4d0568f... 10 done
 =======
 >>>>>>> parent of 4d0568f... 10 done
 }
