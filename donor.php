@@ -109,7 +109,7 @@
 					<div class="col-md-3 col-sm-12 col-lg-3 donors_data">
 					<span class="name">'.$row['Name'] .'</span>
 					<span>'.$row['City'] .'</span>
-					<span>'.$row['Blood Group'] .'</span>
+					<span>'.$row['Blood_Group'] .'</span>
 					<span>'.$row['Gender'] .'</span>
 					<span>'.$row['Email'] .'</span>
 					<span>'.$row['Contact_no'] .'</span>
@@ -126,7 +126,7 @@
 					<div class="col-md-3 col-sm-12 col-lg-3 donors_data">
 					<span class="name">'.$row['Name'] .'</span>
 					<span>'.$row['City'] .'</span>
-					<span>'.$row['Blood Group'] .'</span>
+					<span>'.$row['Blood_Group'] .'</span>
 					<span>'.$row['Gender'] .'</span>
 					<h4 class="name text-center">Donated</h4>
 					</div>
