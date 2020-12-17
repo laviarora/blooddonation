@@ -21,7 +21,6 @@ if(isset($_POST['submit']))
 				</button>
 	 			</div>';
 			}
-
 		}
 		else
 		{
@@ -122,11 +121,11 @@ if(isset($_POST['submit']))
 			</button>
 	  		</div>';
 		}
-		if(isset($_POST['contact_no']) && !empty($_POST['contact-no']))
+		if(isset($_POST['contact_no']) && !empty($_POST['contact_no']))
 		{
 			if(preg_match('/\d{11}/', $_POST['contact_no']))
 			{
-				$contact=$_POST['city'];
+				$contact=$_POST['contact_no'];
 			}
 			else
 			{
@@ -174,8 +173,6 @@ if(isset($_POST['submit']))
 				</button>
 	  			</div>';
 			}
-
-<<<<<<< HEAD
 		}
 		else
 		{
@@ -188,80 +185,24 @@ if(isset($_POST['submit']))
 		}
 		if(isset($_POST['email']) && !empty($_POST['email']))
 		{
-=======
-
-			}else{
-		$passwordError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-		<strong>The password should consist of 6 characters.</strong>
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-	  </div>';
-	}
-
-		}else{
-		$passwordError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-		<strong>Please fill password field.</strong>
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-	  </div>';
-	}
-
-<<<<<<< HEAD
-=======
-
-
-
-
-	}else{
-		$termError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-		<strong>Kindly agree to our terms and conditions.</strong>
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-	  </div>';
-	}
-
-
-	if(isset($_POST['email']) && !empty($_POST['email'])){
->>>>>>> parent of 4d0568f... 10 done
-
-
-
-
-	}else{
-		$termError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-		<strong>Kindly agree to our terms and conditions.</strong>
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-	  </div>';
-	}
-
-
-	if(isset($_POST['email']) && !empty($_POST['email'])){
-
-
->>>>>>> parent of 4d0568f... 10 done
-		    $pattern='/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
+  			$pattern='/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
 			if(preg_match($pattern, $_POST['email']))
 			{
-                $check_email=$_POST['email'];
-                $sql="SELECT email FROM donor WHERE email='$check_email' ";
-                $result=mysqli_query($connection,$sql);
-                if(mysqli_num_rows($result)>0)
-                {
-                	$emailError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+        		$check_email=$_POST['email'];
+            	$sql="SELECT email FROM donor WHERE email='$check_email' ";
+            	$result=mysqli_query($connection,$sql);
+            	if(mysqli_num_rows($result)>0)
+            	{
+              		$emailError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
 					<strong>Sorry this email already exists.</strong>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 		  			<span aria-hidden="true">&times;</span>
 					</button>
 	  				</div>';
 	  			}
-	            else
+	        	else
             	{
-                	$email=$_POST['email'];
+               		$email=$_POST['email'];
             	}
         	}
         	else
@@ -269,7 +210,7 @@ if(isset($_POST['submit']))
 				$emailError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
 				<strong>please enter valid email address.</strong>
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		  		<span aria-hidden="true">&times;</span>
+				<span aria-hidden="true">&times;</span>
 				</button>
 	  			</div>';
 			}
@@ -283,8 +224,6 @@ if(isset($_POST['submit']))
 			</button>
 	  		</div>';
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
 	}
 	else
 	{
@@ -295,10 +234,6 @@ if(isset($_POST['submit']))
 		</button>
 	  	</div>';
 	}
-=======
->>>>>>> parent of 4d0568f... 10 done
-=======
->>>>>>> parent of 4d0568f... 10 done
 }
 ?>
 <style>
