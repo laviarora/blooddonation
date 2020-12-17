@@ -146,7 +146,7 @@ if(isset($_POST['submit']))
 			</button>
 	  		</div>';
 		}
-		if(isset($_POST['password']) && !empty($_POST['password']) && (isset($_POST['c_password']) && !empty($_POST['c_password']))
+		if((isset($_POST['password'])) && (!empty($_POST['password'])) && (isset($_POST['c_password'])) && (!empty($_POST['c_password'])))
 		{
 			if(strlen($_POST['password']) >= 6)
 			{   
