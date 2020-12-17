@@ -33,7 +33,7 @@
 		}
 
 		if(isset($email) && isset($password)){
-			$sql = "SELECT * FROM donor WHERE password = '$password' and email = '$email'";
+			$sql = "SELECT * FROM blooddonation WHERE password = '$password' and email = '$email'";
 			$result = mysqli_query($connection,$sql);
 			if(mysqli_num_rows($result) >0){
 				while($row = mysqli_fetch_assoc($result)){
