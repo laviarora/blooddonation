@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
 	{
 		if(isset($_POST['name']) && !empty($_POST['name']))
 		{
-			if(preg_match('/^[A-Za-z\s]+$', $_POST['name']))
+			if(preg_match('/^[A-Za-z\s]+$/', $_POST['name']))
 			{
 				$name=$_POST['name'];
 			}
