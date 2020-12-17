@@ -9,6 +9,8 @@ if(isset($_POST['submit'])){
 		if(isset($_POST['name']) && !empty($_POST['name'])){
 			if(preg_match('/^[A-Za-z\s]+$', $_POST['name'])){
 
+				$name=$_POST['name'];
+
 			}else{
 				$nameError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
 		<strong>Only lower and upper case and space characters are allowed.</strong>
@@ -27,7 +29,162 @@ if(isset($_POST['submit'])){
 		</button>
 	  </div>';
 
+
 		}
+
+		if(isset($_POST['gender']) && !empty($_POST['gender'])){
+			$gender=$_POST['gender'];
+
+		}else{
+			$genderError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Please select your gender.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+		}
+
+		if(isset($_POST['day']) && !empty($_POST['day'])){
+			$day=$_POST['day'];
+
+		}else{
+			$dayError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Please select day input.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+		}
+
+		if(isset($_POST['month']) && !empty($_POST['month'])){
+			$month=$_POST['month'];
+
+		}else{
+			$monthError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Please select month input.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+		}
+		if(isset($_POST['year']) && !empty($_POST['year'])){
+			$year=$_POST['year'];
+
+		}else{
+			$yearError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Please select month input.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+		}
+		if(isset($_POST['blood_group']) && !empty($_POST['blood_group'])){
+			$blood_group=$_POST['blood_group'];
+
+		}else{
+			$blood_groupError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Please select blood group input.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+		}
+
+		if(isset($_POST['city']) && !empty($_POST['city'])){
+			if(preg_match('/^[A-Za-z\s]+$', $_POST['city'])){
+
+				$city=$_POST['city'];
+
+			}else{
+				$cityError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Only lower and upper case and space characters are allowed.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+			}
+
+		}else{
+			$cityError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Please fill the city input.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+
+		}
+		if(isset($_POST['contact_no']) && !empty($_POST['contact-no'])){
+			if(preg_match('/\d{11}/', $_POST['contact_no'])){
+
+				$contact=$_POST['city'];
+
+			}else{
+				$contactError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>contact should consist of 11 characters.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+			}
+
+		}else{
+			$contactError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Please fill the contact input.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+
+		}
+
+		if(isset($_POST['password']) && !empty($_POST['password']) && (isset($_POST['c_password']) && !empty($_POST['c_password'])){
+
+			if(strlen($_POST['password'])>=6){
+               
+               if($_POST['password']== $_POST['c_password']){
+               	$password=$_POST['password'];
+
+               }else{
+               	$passwordError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>The password are not same.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+
+               }
+
+
+			}else{
+		$passwordError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>The password should consist of 6 characters.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+	}
+
+		}else{
+		$passwordError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>Please fill password field.</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	  </div>';
+	}
+
+
+
+
 
 	}else{
 		$termError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -92,6 +249,7 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
 					<div class="form-group">
 						<label for="fullname">Full Name</label>
 						<input type="text" name="name" id="fullname" placeholder="Full Name" required pattern="[A-Za-z/\s]+" title="Only lower and upper case and space" class="form-control">
+						<?php if(isset($nameError)) echo $nameError; ?>
 					</div><!--full name-->
 					<div class="form-group">
               <label for="name">Blood Group</label><br>
@@ -111,10 +269,11 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
 				              <label for="gender">Gender</label><br>
 				              		Male<input type="radio" name="gender" id="gender" value="Male" style="margin-left:10px; margin-right:10px;" checked>
 				              		Fe-male<input type="radio" name="gender" id="gender" value="Fe-male" style="margin-left:10px;">
+				              		<?php if(isset($genderError)) echo $genderError; ?>
 				    </div><!--gender-->
 				    <div class="form-inline">
               <label for="name">Date of Birth</label><br>
-              <select class="form-control demo-default" id="date" name="date" style="margin-bottom:10px;" required>
+              <select class="form-control demo-default" id="date" name="day" style="margin-bottom:10px;" required>
                 <option value="">---Date---</option>
                 <option value="01" >01</option><option value="02" >02</option><option value="03" >03</option><option value="04" >04</option><option value="05" >05</option><option value="06" >06</option><option value="07" >07</option> <option value="08" >08</option><option value="09" >09</option><option value="10" >10</option><option value="11" >11</option><option value="12" >12</option><option value="13" >13</option><option value="14" >14</option><option value="15" >15</option><option value="16" >16</option><option value="17" >17</option><option value="18" >18</option><option value="19" >19</option><option value="20" >20</option><option value="21" >21</option><option value="22" >22</option><option value="23" >23</option><option value="24" >24</option><option value="25" >25</option><option value="26" >26</option><option value="27" >27</option><option value="28" >28</option><option value="29" >29</option><option value="30" >30</option><option value="31" >31</option>
               </select>
