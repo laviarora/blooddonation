@@ -149,7 +149,7 @@ if(isset($_POST['submit']))
 		}
 		if(isset($_POST['password']) && !empty($_POST['password']) && (isset($_POST['c_password']) && !empty($_POST['c_password']))
 		{
-			if(strlen($_POST['password'])>=6)
+			if(strlen($_POST['password']) >= 6)
 			{   
                if($_POST['password']== $_POST['c_password'])
                {
