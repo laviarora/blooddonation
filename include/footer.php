@@ -5,7 +5,7 @@
 						<h1 class="text-center">Contact Us</h1>
 						<hr class="white-bar">
 						<div class="details">
-							<p>7634234561 <i class="fa fa-phone"></i>
+							<p>0987654231 <i class="fa fa-phone"></i>
 								blooddonation@gmail.com <i class="fa fa-envelope"></i></p>
 
 					</div>
