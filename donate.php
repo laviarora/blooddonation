@@ -230,7 +230,7 @@ if(isset($_POST['submit']))
 
 		if (isset($name) && isset($blood_group) && isset($gender) && isset($day) && isset($month) && isset($year) && isset($email) && isset($contact) && isset($city) && isset($password)) 
 		{
-			$sql="INSERT INTO blooddonation VALUES ('$name','$blood_group','$gender','$DonorDOB','$email','$contact','$city','$password','0')";
+			$sql="INSERT INTO blooddonation (Name,Blood_Group,Gender,DOB,Email,Contact_no,City,Password,save_life_date) VALUES ('$name','$blood_group','$gender','$DonorDOB','$email','$contact','$city','$password','0')";
 			if (mysqli_query($connection,$sql)) 
 			{    
 				header("Location: signin.php");
@@ -238,12 +238,13 @@ if(isset($_POST['submit']))
 			}
 			else
 			{
-				$submitError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-				<strong>Data not inserted. Try again.</strong>
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-		  		<span aria-hidden="true">&times;</span>
-				</button>
-	  			</div>';
+				echo mysqli_error($connection);
+				//$submitError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				//<strong>Data not inserted. Try again.</strong>
+				//<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  		//<span aria-hidden="true">&times;</span>
+				//</button>
+	  			//</div>';
 			}
 		}
 	}

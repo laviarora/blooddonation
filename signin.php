@@ -1,26 +1,26 @@
-<?php 
+<?php  
 
 	//include header file
 	include ('include/header.php');
 	if(isset($_POST['SignIn'])){
 
-		if(isset($_POST['email']) && !empty($_POST['email']))
+		if((isset($_POST['email'])) && (!empty($_POST['email'])))
 		{
 			$email=$_POST['email'];
 		}
 		else
 		{
-			$passwordError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+			$emailError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
 			<strong>Fill the email...</strong>
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 			</button>
 	  		</div>';
 		}
-		if(isset($_POST['password']) && !empty($_POST['password']))
+		if((isset($_POST['password'])) && (!empty($_POST['password'])))
 		{
 			$password=$_POST['password'];
-			$password = md5($password);
+			$pass = md5($password);
 		}
 		else
 		{
@@ -33,11 +33,12 @@
 		}
 
 		if(isset($email) && isset($password)){
-			$sql = "SELECT * FROM blooddonation WHERE Password = '$password' and Email = '$email'";
+			$sql = "SELECT * FROM blooddonation WHERE (Password = '$pass' and Email = '$email')";
 			$result = mysqli_query($connection,$sql);
+			echo mysqli_num_rows($result);			
 			if(mysqli_num_rows($result) >0){
 				while($row = mysqli_fetch_assoc($result)){
-					$_SESSION['user_id'] = $row['id'];
+					$_SESSION['user_id'] = $row['ID'];
 					$_SESSION['name'] = $row['Name'];
 					$_SESSION['save_life_date'] = $row['save_life_date'];
 					
@@ -46,12 +47,13 @@
 				}
 			
 			}else{
-				$submitError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-			<strong>No Record Found</strong>
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-			</button>
-	  		</div>';
+				echo mysqli_error($connection);
+				//$submitError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+			//<strong>No Record Found</strong>
+			//<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			//<span aria-hidden="true">&times;</span>
+			//</button>
+	  		//</div>';
 			}
 		}
 
@@ -111,7 +113,7 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
 
 			<form action="" method="post" >
 				<div class="form-group">
-					<label for="email">Email/Phone no.</label>
+					<label for="email">Email</label>
 					<input type="text" name="email" class="form-control" placeholder="Email" required>
 					<?php if(isset($emailError)) echo $emailError; ?>
 				</div>
