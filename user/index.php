@@ -34,8 +34,8 @@
 
 		$crntDate = date_format($crntDate, 'Y-m-d');
 
-		$sql="UPDATE blooddonation SET save_life_date='$crntDate' WHERE ID='$userID' ";
-		if(mysqli_query($connection,$sql)){
+		$sql="UPDATE blooddonation SET save_life_date='$crntDate' WHERE id='$userID' ";
+		if(mydqli_query($connection,$sql)){
 			$_SESSION['save_life_date'] = $crntDate;
 
 			header("Location: index.php");
