@@ -52,21 +52,42 @@
 
                              <?php
 
-                                 $safelife=$_SESSION['save_life_date'];
-                                 if($safelife=='0'){
+                                 $safeDate=$_SESSION['save_life_date'];
+                                 if($safeDate=='0'){
 
                                  	echo'<form target="" method="post">
 							<button style="margin-top: 20px;" name="date" id="save_the_life" type="submit" class="btn btn-lg btn-danger center-aligned ">Save The Life</button>
 							</form>';
 
                                  }else{
-                                 	echo '<div class="donors_data">
+
+                                 	$start=date_create("$safeDate");
+                                 	$end=date_create();
+                                 	$diff=date_diff($start,$end);
+                                 
+                                 	$diffMonth=$diff->m;
+                                 	
+
+                                 	if($diffMonth>=3){
+                                 		echo '<div class="donors_data">
 					                <span class="name">Congratulation!</span>
 					                <span>You Already Safe the life.You will donate the blood after three months.We are very thanking full to you.</span>
 					                
 					
 					              </div>';
 
+                                 	}else{
+                                 		echo '<div class="donors_data">
+					                <span class="name">Congratulation!</span>
+					                <span>You Already Safe the life.You will donate the blood after three months.We are very thanking full to you.</span>
+					                
+					
+					              </div>';
+                                 	}
+
+                                 	
+
+                                 	
                                  }
 
 
