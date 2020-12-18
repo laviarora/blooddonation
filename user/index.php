@@ -4,7 +4,55 @@
 	include 'include/header.php'; 
 	 if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
 
-	 
+		if(isset($_POST['date'])){
+
+			$showForm='
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Do you want to update your record?</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <form target="" method="post">
+                <br>
+                <input type="hidden" name="userID" value="'.$_SESSION['user_id'].'">
+                <button type="submit" name="updateSave" class="btn btn-danger">Yes</button>
+
+                <button type="button" class="btn btn-info" data-dismiss="alert">
+                <span aria-hidden="true">Oops! No </span>
+                </button>      
+            </form>
+     </div>
+			
+			';
+		}
+
+	 if(isset($_POST['userID'])){
+
+		$userID = $_POST['userID'];
+
+		$crntDate = date_create();
+
+		$crntDate = date_format($crntDate, 'Y-m-d');
+
+		$sql="UPDATE blooddonation SET save_life_date='$crntDate' WHERE id='$userID' ";
+		if(mydqli_query($connection,$sql)){
+			$_SESSION['save_life_date'] = $crntDate;
+
+			header("Location: index.php");
+
+		}else{
+			$submitError = '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				<strong>Data not inserted. Try again.</strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  		<span aria-hidden="true">&times;</span>
+				</button>
+	  			</div>';
+
+
+
+		}
+
+	 }
 ?>
 
 
@@ -34,6 +82,8 @@
 				<div class="col-md-12 col-md-push-1">
 					<div class="panel panel-default" style="padding: 20px;">
 						<div class="panel-body">
+						<?php if(isset($submitError)) echo $submitError;
+					?>
 							
 								<div class="alert alert-danger alert-dismissable" style="font-size: 18px; display: none;">
     						
@@ -48,11 +98,19 @@
 							<div class="heading text-center">
 								<h3>Welcome </h3> <h1><?php if(isset($_SESSION['name'])) echo $_SESSION['name']; ?></h1>
 							</div>
-							<p class="text-center">Here you can mennage your account update your profile</p>
+							<p class="text-center">Here you can manage your account.. update your profile</p>
+
+							<div class="test-success text-center" id="data" style="margin-top: 20px;">
+							<?php if(isset($showForm)) echo $showForm;  ?>
+								<!-- Display Message here--></div>
+
 
                              <?php
 
-                                 $safeDate=$_SESSION['save_life_date'];
+								 $safeDate=$_SESSION['save_life_date'];
+								 
+
+								 
                                  if($safeDate=='0'){
 
                                  	echo'<form target="" method="post">
@@ -96,8 +154,7 @@
 							
                                    
                                    
-					              <div class="test-success text-center" id="data" style="margin-top: 20px;">
-								<!-- Display Message here--></div>
+					            
 					
 
 
