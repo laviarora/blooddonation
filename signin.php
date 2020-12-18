@@ -39,7 +39,6 @@
 				while($row = mysqli_fetch_assoc($result)){
 					$_SESSION['user_id'] = $row['id'];
 					$_SESSION['name'] = $row['Name'];
-					$_SESSION['save_life_date'] = $row['save_life_date'];
 					
 
 					header('Location: user/index.php');
