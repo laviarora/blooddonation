@@ -232,9 +232,13 @@ if(isset($_POST['submit']))
 		{
 			$sql="INSERT INTO blooddonation VALUES ('$name','$blood_group','$gender','$DonorDOB','$email','$contact','$city','$password','0')";
 			if (mysqli_query($connection,$sql)) 
-			{    
-				header("Location: signin.php");
-					
+			{
+				$submitSuccess = '<div class="alert alert-success alert-dismissible fade show" role="alert">
+				<strong>Data inserted successfully</strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		  		<span aria-hidden="true">&times;</span>
+				</button>
+	  			</div>';		
 			}
 			else
 			{
@@ -308,7 +312,7 @@ box-shadow: 0px 2px 5px -2px rgba(89,89,89,0.95);
 					
           <!-- Error Messages -->
 
-				<form class="form-group" action="" method="post" >
+				<form class="form-group" action="" method="post" novalidate="">
 					<div class="form-group">
 						<label for="fullname">Full Name</label>
 						<input type="text" name="name" id="fullname" placeholder="Full Name" required pattern="[A-Za-z/\s]+" title="Only lower and upper case and space" class="form-control" value="<?php if(isset($name)) echo $name; ?>">
