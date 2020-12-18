@@ -2,8 +2,9 @@
 <?php 
 
 	include 'include/header.php'; 
-	
+	 if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
 
+	 
 ?>
 
 
@@ -45,6 +46,9 @@
 		
 		
 <?php
+ }else{
+	 	header("Location: ../index.php");
+	 }
 
 include 'include/footer.php'; 
 ?>
