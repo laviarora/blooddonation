@@ -20,7 +20,7 @@
 		if(isset($_POST['password']) && !empty($_POST['password']))
 		{
 			$password=$_POST['password'];
-			$password = md5($password);
+			//$password = md5($password);
 		}
 		else
 		{
@@ -33,11 +33,11 @@
 		}
 
 		if(isset($email) && isset($password)){
-			$sql = "SELECT * FROM blooddonation WHERE Password = '$password' and Email = '$email'";
+			$sql = "SELECT * FROM blooddonation WHERE (Password = '$password' and Email = '$email')";
 			$result = mysqli_query($connection,$sql);
 			if(mysqli_num_rows($result) >0){
 				while($row = mysqli_fetch_assoc($result)){
-					$_SESSION['user_id'] = $row['id'];
+					$_SESSION['user_id'] = $row['ID'];
 					$_SESSION['name'] = $row['Name'];
 					
 
