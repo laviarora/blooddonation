@@ -1,8 +1,6 @@
 <?php 
 	
 	include 'include/header.php';
-	 if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
-
 
 	include 'include/sidebar.php';
 
@@ -126,8 +124,5 @@
 		</div>
 	
 <?php
-}else{
-	 	header("Location: ../index.php");
-	 }
 include 'include/footer.php'; 
  ?>
